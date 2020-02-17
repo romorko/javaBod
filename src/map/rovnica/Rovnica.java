@@ -1,6 +1,5 @@
 package map.rovnica;
 
-public class kvadraticka
+public interface Rovnica
 {
-
 }

@@ -2,7 +2,7 @@ package map.rovnica;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class linearna
+public class Linearna
 {
     static int getInt(boolean ajNula )
     {
@@ -34,18 +34,18 @@ public class linearna
     private float koren;
     public static Scanner sc= new Scanner(System.in);
 
-    public linearna(int k1,int k2)
+    public Linearna(int k1, int k2)
     {
         this.koefA=k1;
         koefB=k2;
     }
 
-    public linearna(int koef)
+    public Linearna(int koef)
     {
         koefA=koefB=koef;
     }
 
-    public linearna()
+    public Linearna()
     {
         System.out.println("Zadaj koeficient A:");
         koefA= sc.nextInt();

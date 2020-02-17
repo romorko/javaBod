@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args)
     {
-        linearna Prva = new linearna();
+        Linearna Prva = new Linearna();
 
 	// write your code here
     }
