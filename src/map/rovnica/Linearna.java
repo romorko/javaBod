@@ -32,6 +32,8 @@ public class Linearna extends Rovnica
     @Override
     protected float[] getKorene()
     {
-        return new float[0];
+        float[] k=new float[1];
+        k[0]=-koefB/(float)koefA;
+        return k;
     }
 }
