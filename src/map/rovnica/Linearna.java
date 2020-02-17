@@ -2,41 +2,16 @@ package map.rovnica;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Linearna
+public class Linearna extends Rovnica
 {
-    static int getInt(boolean ajNula )
-    {
-        int cislo;
-        while(true)
-        {
-            try
-            {
-                System.out.println("Zadaj cislo:");
-                cislo = sc.nextInt();
-                if (ajNula==false && cislo==0) throw new ArithmeticException();
-                break;
-            }
-            catch (InputMismatchException e)
-            {
-                System.out.println("Nebolo zadane cislo, skus znovu!");
-                sc.nextLine();
-            }
-            catch (ArithmeticException e)
-            {
-                System.out.println("Nesmie byt nula!");
-            }
-        }
-        return cislo;
-    }
 
-    private int koefA=0;
-    private int koefB=0;
-    private float koren;
-    public static Scanner sc= new Scanner(System.in);
+
+    private int koefA;
+    private int koefB;
 
     public Linearna(int k1, int k2)
     {
-        this.koefA=k1;
+        this.koefA=nieNula(k1);
         koefB=k2;
     }
 
@@ -48,6 +23,21 @@ public class Linearna
     public Linearna()
     {
         System.out.println("Zadaj koeficient A:");
-        koefA= sc.nextInt();
+        koefA= getInt(false);
+        System.out.println("Zadaj koeficient B:");
+        koefB= getInt(true);
+
+    }
+
+    @Override
+    protected void vypisRovnicu()
+    {
+
+    }
+
+    @Override
+    protected float[] getKorene()
+    {
+        return new float[0];
     }
 }
