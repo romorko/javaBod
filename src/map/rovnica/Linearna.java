@@ -1,14 +1,7 @@
 package map.rovnica;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class Linearna extends Rovnica
 {
-
-
-    private int koefA;
-    private int koefB;
-
     public Linearna(int k1, int k2)
     {
         this.koefA=nieNula(k1);
@@ -17,7 +10,8 @@ public class Linearna extends Rovnica
 
     public Linearna(int koef)
     {
-        koefA=koefB=koef;
+        koefA= nieNula(koef);
+        koefB=koef;
     }
 
     public Linearna()
@@ -26,13 +20,13 @@ public class Linearna extends Rovnica
         koefA= getInt(false);
         System.out.println("Zadaj koeficient B:");
         koefB= getInt(true);
-
     }
+
 
     @Override
     protected void vypisRovnicu()
     {
-
+        System.out.println(koefA+"x+"+koefB+"=0");
     }
 
     @Override
