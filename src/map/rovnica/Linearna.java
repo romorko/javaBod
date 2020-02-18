@@ -16,24 +16,31 @@ public class Linearna extends Rovnica
 
     public Linearna()
     {
-        System.out.println("Zadaj koeficient A:");
-        koefA= getInt(false);
-        System.out.println("Zadaj koeficient B:");
-        koefB= getInt(true);
+        koefA= getInt(false,"Zadaj koeficient A:");
+        koefB= getInt(true,"Zadaj koeficient B:");
     }
 
 
     @Override
     protected void vypisRovnicu()
     {
-        System.out.println(koefA+"x+"+koefB+"=0");
+        System.out.printf("%dx%+d = 0\n",koefA,koefB);
     }
 
     @Override
     protected float[] getKorene()
     {
         float[] k=new float[1];
-        k[0]=-koefB/(float)koefA;
+        try
+        {
+            k[0]=-koefB/(float)koefA;
+        }
+        catch (ArithmeticException e)
+        {
+            System.out.println("Zaregistrovan0 delenie nulou!");
+            k[0]=0;
+            return k;
+        }
         return k;
     }
 }

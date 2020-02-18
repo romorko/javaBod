@@ -23,7 +23,7 @@ abstract public class Rovnica
         }
         return c;
     }
-    protected int getInt(boolean ajNula)
+    protected int getInt(boolean ajNula, String sprava)
     {
         int cislo;
         Scanner sc= new Scanner(System.in);
@@ -31,9 +31,9 @@ abstract public class Rovnica
         {
             try
             {
-                System.out.println("Zadaj cislo:");
+                System.out.println(sprava);
                 cislo = sc.nextInt();
-                if (ajNula==false && cislo==0) throw new ArithmeticException();
+                if (ajNula==false && cislo==0) throw new Nula(cislo);
                 break;
             }
             catch (InputMismatchException e)
@@ -41,13 +41,9 @@ abstract public class Rovnica
                 System.out.println("Nebolo zadane cislo, skus znovu!");
                 sc.nextLine();
             }
-            catch (ArithmeticException e)
+            catch (Nula e)
             {
-                System.out.println("Nesmie byt nula!");
-            }
-            //catch(Nula e)
-            {
-
+                e.sprava();
             }
         }
         return cislo;
