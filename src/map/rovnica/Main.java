@@ -1,7 +1,4 @@
 package map.rovnica;
-
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args)
@@ -30,7 +27,6 @@ public class Main {
             i.vypisRovnicu();
             i.vypisKorene();
         }
-
 	// write your code here
     }
 }
