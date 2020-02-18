@@ -29,7 +29,7 @@ public class Kvadraticka extends Rovnica
     @Override
     protected void vypisRovnicu()
     {
-        System.out.printf("%dx^2%+dx%+d = 0",koefA,koefB,koefC);
+        System.out.printf("%dx^2 %+dx %+d = 0\n",koefA,koefB,koefC);
     }
 
     @Override
@@ -53,5 +53,21 @@ public class Kvadraticka extends Rovnica
             k= new float[0];
         }
         return k;
+    }
+
+    @Override
+    protected void vypisKorene()
+    {
+        switch (getKorene().length)
+        {
+            case 0:
+                System.out.println("Rovnica nema realny koren!\n");
+                break;
+            case 1:
+                System.out.printf("Rovnica ma jeden realny koren: x = %.2f\n",getKorene()[0]);
+                break;
+            default:
+                System.out.printf("Rovnica ma dva realne korene: x1 = %.2f a x2 = %.2f\n",getKorene()[0],getKorene()[1]);
+        }
     }
 }

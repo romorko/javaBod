@@ -10,6 +10,7 @@ abstract public class Rovnica
 
     abstract protected void vypisRovnicu();
     abstract protected float [] getKorene();
+    abstract protected void vypisKorene();
     protected int nieNula(int c)
     {
         try

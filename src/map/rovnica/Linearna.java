@@ -1,6 +1,6 @@
 package map.rovnica;
 
-public class Linearna extends Rovnica
+                    public class Linearna extends Rovnica
 {
     public Linearna(int k1, int k2)
     {
@@ -42,5 +42,11 @@ public class Linearna extends Rovnica
             return k;
         }
         return k;
+    }
+
+    @Override
+    protected void vypisKorene()
+    {
+        System.out.printf("Koren je %.2f\n",getKorene()[0]);
     }
 }
