@@ -33,7 +33,10 @@ abstract public class Rovnica
             {
                 System.out.println(sprava);
                 cislo = sc.nextInt();
-                if (ajNula==false && cislo==0) throw new Nula(cislo);
+                if (!ajNula && cislo==0)
+                {
+                    throw new Nula(cislo);
+                }
                 break;
             }
             catch (InputMismatchException e)
