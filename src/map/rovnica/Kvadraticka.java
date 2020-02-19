@@ -15,6 +15,7 @@ public class Kvadraticka extends Rovnica
 
     Kvadraticka(int a)
     {
+        //this(a,a,a);
         koefA=nieNula(a);
         koefB=koefC=a;
     }

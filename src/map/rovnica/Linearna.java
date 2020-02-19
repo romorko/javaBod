@@ -1,6 +1,6 @@
 package map.rovnica;
 
-                    public class Linearna extends Rovnica
+public class Linearna extends Rovnica
 {
     public Linearna(int k1, int k2)
     {
@@ -10,6 +10,7 @@ package map.rovnica;
 
     public Linearna(int koef)
     {
+        //this(koef,koef);
         koefA= nieNula(koef);
         koefB=koef;
     }
@@ -19,6 +20,7 @@ package map.rovnica;
         koefA= getInt(false,"Zadaj koeficient A:");
         koefB= getInt(true,"Zadaj koeficient B:");
     }
+
 
 
     @Override
