@@ -30,7 +30,7 @@ public class Linearna extends Rovnica
     }
 
     @Override
-    protected float[] getKorene()
+    public float[] getKorene()
     {
         float[] k=new float[1];
         try

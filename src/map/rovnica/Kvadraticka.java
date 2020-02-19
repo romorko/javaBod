@@ -34,7 +34,7 @@ public class Kvadraticka extends Rovnica
     }
 
     @Override
-    protected float[] getKorene()
+    public float[] getKorene()
     {
         float d=koefB*koefB-4*koefA*koefC;
         float[] k;

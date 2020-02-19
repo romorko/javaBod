@@ -17,7 +17,7 @@ public class Main {
         Stvrta.vypisKorene();
         Kvadraticka Piata = new Kvadraticka();
         Piata.vypisRovnicu();
-        Piata.vypisKorene();*/
+        Piata.vypisKorene();
         //Rovnica r = new Rovnica();
         Rovnica [] rovnice = new Rovnica[2];
         rovnice[0] = new Linearna(1,2);
@@ -26,7 +26,6 @@ public class Main {
         {
             i.vypisRovnicu();
             i.vypisKorene();
-        }
-	// write your code here
+        }*/
     }
 }
