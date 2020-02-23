@@ -21,7 +21,10 @@ public class Linearna extends Rovnica
         koefB= getInt(true,"Zadaj koeficient B:");
     }
 
-
+    public String toString()
+    {
+        return koefA+"x"+((koefB>0)?" + ":" - ")+koefB+" = 0";
+    }
 
     @Override
     protected void vypisRovnicu()

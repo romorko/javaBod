@@ -3,7 +3,8 @@ public class Main {
 
     public static void main(String[] args)
     {
-/*        Linearna Prva = new Linearna(3,6);
+       /* Linearna Prva = new Linearna(3,6);
+       System.out.print(Prva);
         Linearna Druha = new Linearna();
         Linearna Tretia = new Linearna(4);
         Prva.vypisRovnicu();
